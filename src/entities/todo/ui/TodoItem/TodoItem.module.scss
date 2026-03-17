@@ -6,6 +6,10 @@
   border: var(--border);
   border-radius: var(--border-radius);
 
+  & a {
+    text-decoration: none;
+  }
+
   &:hover {
     background-color: var(--color-gray-1);
   }
