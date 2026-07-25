@@ -1,21 +1,22 @@
-Полнофункциональное приложение для управления задачами (To Do List), разработанное на React. Позволяет пользователям создавать, редактировать, удалять и искать задачи. Все изменения автоматически сохраняются в localStorage, обеспечивая сохранение данных между сеансами.
+# React Task Manager
 
-Ключевые возможности:
+A task management application built with React.
 
-✅ Добавление и удаление задач
-🔍 Поиск по названию задачи
-✔️ Отметить задачу как выполненную/невыполненную
-💾 Автоматическое сохранение в веб-хранилище
-⚡ Автоскролл к первой невыполненной задаче
-📊 Информация о статусе (выполнено/осталось)
+## Highlights
 
-Используемые технологии:
-React 19
-Vite
-Context API
-localStorage API
-CSS
-ESLint
+- Create, edit, and delete tasks
+- Search and filter by status
+- Persistent data with `localStorage`
+- Scroll to unfinished tasks
+- Task statistics
 
-Архитектура:
-Компонентно-ориентированная структура с разделением на компоненты (UI элементы), контекст (управление состоянием) и стили. Профессиональная организация кода с использованием современных паттернов React.
+## Tech stack
+
+React 19, Vite, Context API, localStorage, CSS, ESLint.
+
+## Run locally
+
+```bash
+npm install
+npm run dev
+```
