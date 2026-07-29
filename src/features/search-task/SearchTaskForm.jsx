@@ -15,7 +15,7 @@ const SearchTaskForm = (props) => {
         onSubmit={(event) => event.preventDefault()}
         >
             <Field 
-                classname={styles.field}
+                className={styles.field}
                 label='Search task'
                 id='search-task'
                 type='search'

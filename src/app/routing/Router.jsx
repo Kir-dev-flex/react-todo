@@ -32,7 +32,7 @@ const matchPath = (path, route) => {
     return params
 }
 
-export const useRoute = () => {
+const useRoute = () => {
     const [path, setPath] = useState(getCurrentPath());
 
     useEffect(() => {

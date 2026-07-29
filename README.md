@@ -1,22 +1,43 @@
-# React Task Manager
+# Focus List
 
-A task management application built with React.
+A compact React task manager designed as a clean personal workspace rather than a generic tutorial demo.
 
-## Highlights
+## Features
 
-- Create, edit, and delete tasks
-- Search and filter by status
-- Persistent data with `localStorage`
-- Scroll to unfinished tasks
-- Task statistics
+- Create, complete, search, inspect, and delete tasks
+- Persistent browser storage with an asynchronous API adapter
+- Derived completion statistics
+- Smooth navigation to the first unfinished task
+- Animated list updates and responsive layout
+- Custom lightweight routing with GitHub Pages support
 
-## Tech stack
+## Architecture
 
-React 19, Vite, Context API, localStorage, CSS, ESLint.
+The project follows a feature-oriented structure:
+
+- `app` — application setup and routing
+- `pages` — route-level screens
+- `widgets` — composed interface blocks
+- `features` — user actions
+- `entities` — task model and UI
+- `shared` — reusable API, hooks, and controls
+
+## Stack
+
+React 19, JavaScript, Vite, CSS Modules, Sass, localStorage.
 
 ## Run locally
 
 ```bash
-npm install
+npm ci
 npm run dev
 ```
+
+## Quality checks
+
+```bash
+npm run lint
+npm run build
+```
+
+This is a learning/pet project focused on React composition, state flows, browser persistence, and maintainable frontend structure.

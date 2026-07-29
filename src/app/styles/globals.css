@@ -1,11 +1,20 @@
 body {
   display: flex;
   justify-content: center;
-  align-items: start;
+  align-items: flex-start;
   min-height: 100vh;
-  padding: 100px 30px;
+  padding: clamp(12px, 6vw, 64px) 16px;
   font-family: 'Inter', sans-serif;
-  background-color: var(--color-gray-1);
+  background:
+    radial-gradient(circle at 15% 15%, rgb(143 128 255 / 28%), transparent 28%),
+    radial-gradient(circle at 85% 10%, rgb(86 211 184 / 18%), transparent 25%),
+    linear-gradient(150deg, #eeecfb, #f7f8fc 55%, #e8f7f3);
+}
+
+#root {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 input,
@@ -15,7 +24,7 @@ button {
 }
 
 :focus-visible {
-  outline: 2px dashed var(--color-black);
+  outline: 2px solid var(--color-primary);
   outline-offset: 4px;
   transition-duration: 0s !important;
 }

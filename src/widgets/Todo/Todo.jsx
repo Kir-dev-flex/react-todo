@@ -13,15 +13,29 @@ const Todo = () => {
 
     return (
         <div className={styles.todo}>
-            <h1 className={styles.title}>To Do List</h1>
-            <AddTaskForm styles={styles} />
-            <SearchTaskForm styles={styles} />
+            <header className={styles.header}>
+                <div>
+                    <p className={styles.eyebrow}>Personal workspace</p>
+                    <h1 className={styles.title}>Today’s focus</h1>
+                    <p className={styles.subtitle}>A lightweight task list that keeps your day moving.</p>
+                </div>
+                <div className={styles.dateBadge}>
+                    <span>{new Intl.DateTimeFormat('en', { weekday: 'short' }).format(new Date())}</span>
+                    {new Date().getDate()}
+                </div>
+            </header>
+            <section className={styles.addPanel} aria-label="Add a task">
+                <AddTaskForm styles={styles} />
+            </section>
+            <div className={styles.toolbar}>
+                <SearchTaskForm styles={styles} />
+                <Button
+                    onClick={() => firstIncopletedTaskRef.current?.scrollIntoView({behavior: 'smooth'})}
+                >
+                    Next open task
+                </Button>
+            </div>
             <TodoInfo styles={styles} />
-            <Button 
-            onClick={() => firstIncopletedTaskRef.current?.scrollIntoView({behavior: 'smooth'})} 
-            >
-            Show first incompleted task
-            </Button>
             <TodoList styles={styles} />
         </div>
     )

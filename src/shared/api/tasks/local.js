@@ -3,7 +3,7 @@ const STORAGE_KEY = 'tasks'
 const read = () => {
     try {
         return JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]')
-    } catch (error) {
+    } catch {
         return []
     }
 }
@@ -35,7 +35,7 @@ const localAPI = {
         
         const newTask = {
             ...task,
-            id: crypto?.randomUUID ?? Date.now().toString(),
+            id: crypto?.randomUUID?.() ?? Date.now().toString(),
         }
 
         write([...read(), newTask])
@@ -51,7 +51,7 @@ const localAPI = {
         write(tasks)
     },
 
-    deleteAll: async (tasks) => {
+    deleteAll: async () => {
         await delay()
         
         write([])
